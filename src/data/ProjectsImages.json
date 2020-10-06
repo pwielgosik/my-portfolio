@@ -1,0 +1,40 @@
+[
+  {
+    "name": "F1 Drivers Database",
+    "src": "../images/projects/f1-database.jpg",
+    "liveSrc": "https://s50b32.github.io/f1-lineup/",
+    "githubSrc": "https://github.com/S50B32/f1-lineup",
+    "stack": ["HTML", "CSS", "React"],
+    "description": "My first React project, including some more complex concepts than a simple to-do list. React Router and dynamic data fetching from a simple API were implemented. Despite its relative simplicity, F1 Database helped me to understand some basic React techniques and furtherly excercise my CSS skills."
+  },
+  {
+    "name": "Jaglana Homepage",
+    "src": "../images/projects/jaglana-home.jpg",
+    "githubSrc": "https://github.com/S50B32/jaglana-homepage",
+    "stack": ["HTML", "CSS", "React", "GatsbyJS", "GraphQL"],
+    "description": "Project with which I won my first client. A simple design which shown my skills to the restaurant owner and led to further cooperation between us. I got to know some new tools such as GatsbyJS, GraphQL and styled-components."
+  },
+  {
+    "name": "Jaglana Shop",
+    "src": "../images/projects/jaglana-shop.jpg",
+    "liveSrc": "https://5f6eabdefc813e9d4cf2473d--jaglana.netlify.app/",
+    "githubSrc": "https://github.com/S50B32/jaglana-shop",
+    "stack": [
+      "HTML",
+      "CSS",
+      "React",
+      "GatsbyJS",
+      "GraphQL",
+      "WordPress",
+      "WooCommerce"
+    ],
+    "description": "My most ambitious commercial project which I am very proud of. It took a long time to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless content management system and build an individual front-end myself including design and coding. I understood the principles of communication between a complicated Wordpress/Woocommerce API and a UI layer."
+  },
+  {
+    "name": "Portfolio Site",
+    "src": "../images/projects/my-portfolio.jpg",
+    "githubSrc": "https://github.com/S50B32/my-portfolio",
+    "stack": ["HTML", "CSS", "React", "GatsbyJS", "GraphQL"],
+    "description": "It is as you can see it. Same stack, but better design and cleaner code."
+  }
+]

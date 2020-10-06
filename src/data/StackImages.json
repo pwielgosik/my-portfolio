@@ -1,0 +1,34 @@
+[
+  {
+    "name": "HTML",
+    "src": "../images/stack/html.png"
+  },
+  {
+    "name": "CSS",
+    "src": "../images/stack/css.png"
+  },
+  {
+    "name": "JavaScript",
+    "src": "../images/stack/js.png"
+  },
+  {
+    "name": "React",
+    "src": "../images/stack/react.png"
+  },
+  {
+    "name": "GatsbyJS",
+    "src": "../images/stack/gatsby.png"
+  },
+  {
+    "name": "GraphQL",
+    "src": "../images/stack/graphql.png"
+  },
+  {
+    "name": "WordPress",
+    "src": "../images/stack/wp.png"
+  },
+  {
+    "name": "WooCommerce",
+    "src": "../images/stack/woo.png"
+  }
+]
