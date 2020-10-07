@@ -13,21 +13,10 @@ export const Button = styled.button`
   font-size: 1.8rem;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
-
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};
   border-radius: 10px;
 
   /* box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2); */
-
-  /* ------ RWD ------ */
-  @media (max-width: 500px) {
-    font-size: 1.8rem;
-    padding: 1.5rem 2rem 1.5rem;
-  }
-  @media (max-width: 400px) {
-    font-size: 1.6rem;
-    padding: 1rem 1.5rem 1rem;
-  }
-  /* ----------------- */
 
   &:hover {
     background-color: ${({
@@ -113,5 +102,26 @@ export const Button = styled.button`
       theme.colors.light};
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+
+    /* ------ RWD ------ */
+    @media (max-width: 500px) {
+      font-size: 1.8rem;
+      padding: 1.5rem 2rem 1.5rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 1.4rem;
+      padding: 1rem 1.5rem 1rem;
+    }
+    /* ----------------- */
   }
+`
+
+export const MobileSideMenuButton = styled(Button)`
+  display: inline-flex;
+  width: 100%;
+  /* border-bottom: 1px solid gray; */
+  font-size: 3rem;
+  margin: 0;
+  padding: 2rem;
+  border-radius: 0;
 `

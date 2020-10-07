@@ -22,9 +22,9 @@ const StyledScrollUpButton = styled.div`
   transform: rotate(180deg);
 
   svg {
-    height: 80%;
-    width: 90%;
     display: block;
+    height: 30px;
+    width: 100%;
   }
 `
 

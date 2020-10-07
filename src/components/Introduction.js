@@ -4,9 +4,24 @@ import { Button } from "../styles/Buttons.styled"
 import styled from "styled-components"
 import ScrollDownButton from "./ScrollDownButton"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import Section from "./Section"
+import { StyledMobileSocials } from "../styles/Layout.styled"
+import GithubIcon from "../images/github.svg"
+import LinkedInIcon from "../images/linkedin.svg"
 
-const TitleContainer = styled.div`
+const StyledIntroductionContainer = styled(ColumnWrapper)`
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
+    padding: 2rem;
+    height: 100vh;
+  }
+  div {
+    z-index: 0;
+  }
+  svg {
+    z-index: 0;
+  }
+`
+
+const StyledTitleContainer = styled.div`
   /* display: flex; */
   /* flex-direction: column; */
   line-height: 40px;
@@ -16,11 +31,6 @@ const TitleContainer = styled.div`
   font-size: 3.2rem;
 
   z-index: 0;
-
-  @media (max-width: ${({ theme }) => theme.media.phone}) {
-    padding: 2rem;
-    height: 100vh;
-  }
 
   h2 {
     display: none;
@@ -38,6 +48,9 @@ const TitleContainer = styled.div`
   }
   span:nth-of-type(3) {
     margin: 60px;
+    @media (max-width: ${({ theme }) => theme.media.phone}) {
+      margin: 0;
+    }
     span {
       color: ${({ theme }) => theme.colors.primary};
       font-size: 4.2rem;
@@ -47,42 +60,62 @@ const TitleContainer = styled.div`
 
 const Introduction = () => {
   return (
-    <section>
-      <ColumnWrapper
+    <section id="introduction-section">
+      <StyledIntroductionContainer
         width="650px"
         minHeight="calc(100vh - 200px)"
-        margin="0 auto 100px"
+        margin="0 auto 0"
         top
         left
       >
-        <TitleContainer>
+        <StyledTitleContainer>
           <h2>Introduction</h2>
           <span>Hi,</span> my name is <hr />
           <span>Przemysław Wielgosik,</span> <hr />
           <span>
             I'm a <span>front end developer.</span>
           </span>
-        </TitleContainer>
+        </StyledTitleContainer>
 
         <RowWrapper
           width="100%"
           left
-          style={{ justifyContent: "space-evenly", marginTop: 100 }}
+          style={{ justifyContent: "space-evenly", marginTop: "12%" }}
         >
-          <Button primary style={{ width: 250 }}>
+          <Button primary minWidth="250px">
             download my resume
           </Button>
           <Button
             as={AnchorLink}
+            minWidth="250px"
             to="/#projects-section"
             secondary
-            style={{ width: 250 }}
           >
-            jump straight to my projects
+            look at my projects
           </Button>
         </RowWrapper>
+        <StyledMobileSocials id="nav-socials-list">
+          <li id="mobile-nav-socials-list-item">
+            <a
+              id="mobile-nav-socials-link"
+              target="_blank"
+              href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
+            >
+              <LinkedInIcon />
+            </a>
+          </li>
+          <li id="mobile-nav-socials-list-item">
+            <a
+              id="mobile-nav-socials-link"
+              target="_blank"
+              href="https://github.com/S50B32"
+            >
+              <GithubIcon />
+            </a>
+          </li>
+        </StyledMobileSocials>
         <ScrollDownButton to="/#technologies-section" />
-      </ColumnWrapper>
+      </StyledIntroductionContainer>
     </section>
   )
 }

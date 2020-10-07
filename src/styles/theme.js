@@ -13,7 +13,8 @@ const theme = {
     regular: "Futura T OT Medium",
   },
   media: {
-    phone: "600px",
+    smallphone: "480px",
+    phone: "666px",
     tablet: "1024px",
     desktop: "1920px",
   },

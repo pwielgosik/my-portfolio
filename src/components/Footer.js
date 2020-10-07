@@ -2,14 +2,9 @@ import React from "react"
 import { StyledFooter } from "../styles/Layout.styled"
 import { ColumnWrapper, RowWrapper } from "../styles/Wrappers.styled"
 
-import {
-  StyledNav,
-  StyledLinks,
-  StyledFooterSocials,
-} from "../styles/Layout.styled"
+import { StyledFooterSocials } from "../styles/Layout.styled"
 import GithubIcon from "../images/github.svg"
 import LinkedInIcon from "../images/linkedin.svg"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Footer = () => {
   return (

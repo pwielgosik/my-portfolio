@@ -2,17 +2,15 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 #gatsby-focus-wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 62.5% 'Futura T OT Medium', serif, sans-serif;
-
-  
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -67,7 +65,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
-
+  display: inline-flex;
 }
 a:active,
 a:hover {
@@ -608,9 +606,9 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
+@media only screen and(max-width: ${({ theme }) => theme.media.phone}){
   html {
-    font-size: 100%;
+    font-size: 56.25%;
   }
 }
 

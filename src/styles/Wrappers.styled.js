@@ -17,10 +17,9 @@ export const ResponsiveWidthWrapper = styled.div`
     width: 100%;
   }
 
-  @media (max-width: ${({ toColumnWidth }) =>
-      toColumnWidth ? toColumnWidth : "768px"}) {
+  @media (max-width: ${({ toColumnWidth, theme }) =>
+      toColumnWidth ? toColumnWidth : theme.media.phone}) {
     flex-direction: column;
-    height: auto;
     width: 100%;
   }
 `

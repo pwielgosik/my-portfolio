@@ -20,6 +20,7 @@ const StyledProjectDetails = styled.div`
   z-index: 1;
   border-radius: 5px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  max-height: 95vh;
 
   /* align-self: center; */
   /* text-align: center; */
@@ -129,7 +130,7 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) =>
             dispatch({ type: actions.HIDE_DETAILS, payload: project })
           }
         >
-          Wróć
+          Return
         </Button>
       </RowWrapper>
     </StyledProjectDetails>

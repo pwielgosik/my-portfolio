@@ -29,12 +29,5 @@
       "WooCommerce"
     ],
     "description": "My most ambitious commercial project which I am very proud of. It took a long time to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless content management system and build an individual front-end myself including design and coding. I understood the principles of communication between a complicated Wordpress/Woocommerce API and a UI layer."
-  },
-  {
-    "name": "Portfolio Site",
-    "src": "../images/projects/my-portfolio.jpg",
-    "githubSrc": "https://github.com/S50B32/my-portfolio",
-    "stack": ["HTML", "CSS", "React", "GatsbyJS", "GraphQL"],
-    "description": "It is as you can see it. Same stack, but better design and cleaner code."
   }
 ]

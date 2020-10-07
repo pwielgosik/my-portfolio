@@ -2,23 +2,18 @@ import styled from "styled-components"
 
 export const HamburgerButton = styled.button`
   display: none;
-  /* justify-content: center;
-    align-items: center; */
   border: none;
   cursor: pointer;
   background-color: transparent;
-
   height: 48px;
   width: 48px;
   margin: 4px;
   padding: 10px;
-  position: relative;
+  position: fixed;
   top: 0;
-  left: 0;
-
+  right: 0;
   z-index: 100;
-
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
     display: block;
     align-self: flex-end;
   }
@@ -26,25 +21,20 @@ export const HamburgerButton = styled.button`
 export const InnerHamburger = styled.div`
   height: 3px;
   width: 100%;
-  background-color: white;
-
   position: relative;
   z-index: 999;
-
-  background-color: ${({ isOpen }) => (isOpen ? "transparent" : "white")};
+  background-color: ${({ isOpen, theme }) =>
+    isOpen ? "transparent" : theme.colors.grey};
   transition: 0.1s background-color ease-in-out;
-
   &::before {
     content: "";
     display: block;
     height: 100%;
     width: 100%;
-    background-color: white;
-
+    background-color: ${({ theme }) => theme.colors.grey};
     position: absolute;
     top: -8px;
     left: 0;
-
     transform: ${({ isOpen }) =>
       isOpen ? "translateY(8px) rotate(225deg)" : ""};
     transition: 0.25s transform ease-in-out;
@@ -54,12 +44,10 @@ export const InnerHamburger = styled.div`
     display: block;
     height: 100%;
     width: 100%;
-    background-color: white;
-
+    background-color: ${({ theme }) => theme.colors.grey};
     position: absolute;
     top: 8px;
     left: 0;
-
     transform: ${({ isOpen }) =>
       isOpen ? "translateY(-8px) rotate(-225deg)" : ""};
     transition: 0.25s transform ease-in-out;

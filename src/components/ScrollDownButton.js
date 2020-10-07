@@ -3,21 +3,24 @@ import ScrollUpSvg from "../images/scroll-up-icon.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styled from "styled-components"
 
-const StyledScrollDownButton = styled.div`
+const StyledScrollDownButton = styled.button`
   /* border: 3px solid #debf84; */
-  margin: 5rem auto 5rem;
+  margin: auto;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
-  width: 120px;
-
+  height: 48px;
+  width: 80px;
+  a {
+    display: block;
+    width: 100% !important;
+  }
   /* background-color: rgba(0, 0, 0, 0.05); */
   svg {
-    height: 80%;
-    width: 90%;
     display: block;
+    height: 100%;
+    width: 100%;
   }
 `
 

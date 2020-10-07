@@ -15,13 +15,16 @@ const Header = ({ siteTitle }) => {
   }
   return (
     <StyledHeader id="header">
-      <ColumnWrapper width="960px" height="200px" margin="0 auto 0" top>
+      <ColumnWrapper width="960px" margin="0 auto 0" top>
         <Hamburger
           id="hamburger-button"
           toggleSideMenu={toggleSideMenu}
           isOpen={isSideMenuOpen}
         />
-        <MobileSideMenu isOpen={isSideMenuOpen} />
+        <MobileSideMenu
+          toggleSideMenu={toggleSideMenu}
+          isOpen={isSideMenuOpen}
+        />
         <Nav />
         <h1>{siteTitle}</h1>
       </ColumnWrapper>

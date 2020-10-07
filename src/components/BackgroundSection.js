@@ -45,11 +45,11 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   left: 0;
 
-  z-index: 0;
+  z-index: -1;
 
   @media (max-width: ${({ theme }) => theme.media.phone}) {
     height: 100vh;

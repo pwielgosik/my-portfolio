@@ -8,11 +8,11 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledNav = styled.nav`
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
+  height: 200px;
 
   a {
     display: block;
@@ -39,7 +39,7 @@ export const StyledNav = styled.nav`
     margin: 5px 20px 5px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
     display: none;
   }
 `
@@ -64,6 +64,9 @@ export const StyledFooterSocials = styled.ul`
   li {
     margin: 1rem;
   }
+  a {
+    padding: 6px;
+  }
   a:hover {
     transition: 0.2s ease-in-out;
     opacity: 0.8;
@@ -76,6 +79,30 @@ export const StyledFooter = styled.footer`
   padding: 4rem;
   max-height: 300px;
   width: 100vw;
-
   color: rgba(255, 255, 255, 0.8);
+  span {
+    margin: 1rem;
+    font-size: 1.4rem;
+  }
+`
+
+export const StyledMobileSocials = styled.ul`
+  display: none;
+  margin: auto;
+  li {
+    margin: 0;
+  }
+  a {
+    padding: 6px;
+    margin: 2.4rem;
+  }
+  a:hover {
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+  }
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
 `

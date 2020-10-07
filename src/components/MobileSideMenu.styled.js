@@ -1,32 +1,24 @@
 import styled from "styled-components"
-import { Button } from "../styles/Buttons.styled"
 
 export const MobileMenuWrapper = styled.div`
   display: none;
+  position: fixed;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  background-color: black;
-
-  height: calc(100vh - 56px);
+  height: 100vh;
   width: 100vw;
-
   z-index: 99;
-  position: absolute;
-  top: 56px;
+  top: 0;
   left: 0;
-
   transform: translateX(${({ isOpen }) => (isOpen ? "0" : "100%")});
-
   transition: transform 0.25s ease-in-out;
-
-  /* padding: 5px; */
+  padding-top: 56px;
+  background-color: ${({ theme }) => theme.colors.primary};
   ul {
     height: 100%;
     width: 100%;
     margin: 0;
-    /* padding: 0 2rem 2rem; */
     padding: 0;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,16 +27,7 @@ export const MobileMenuWrapper = styled.div`
   li {
     text-align: center;
   }
-
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
     display: flex;
   }
-`
-export const MobileSideMenuButton = styled(Button)`
-  display: inline-flex;
-  width: 100%;
-  border-bottom: 1px solid gray;
-  font-size: 3rem;
-  margin: 0;
-  padding: 2rem;
 `

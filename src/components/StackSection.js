@@ -3,6 +3,7 @@ import Section from "./Section"
 import { RowWrapper } from "../styles/Wrappers.styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import ScrollDownButton from "./ScrollDownButton"
 
 import styled from "styled-components"
 
@@ -25,9 +26,9 @@ const StyledTooltip = styled.div`
 `
 
 const StyledImageContainer = styled.div`
-  height: 50px;
-  width: 50px;
-  margin: 1.5rem;
+  height: 80px;
+  width: 80px;
+  margin: 3rem;
 
   position: relative;
 
@@ -35,6 +36,10 @@ const StyledImageContainer = styled.div`
     div {
       display: block;
     }
+  }
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
+    height: 70px;
+    width: 70px;
   }
 `
 
@@ -61,8 +66,9 @@ const StackSection = () => {
       title="Technologies I worked with"
       id="technologies-section"
       wBackground
+      style={{ justifyContent: "space-evenly" }}
     >
-      <RowWrapper>
+      <RowWrapper width="100%" margin="auto">
         {data.allStackImagesJson.nodes.map(tech => (
           <StyledImageContainer>
             <Img fluid={tech.src.childImageSharp.fluid} />
@@ -70,6 +76,7 @@ const StackSection = () => {
           </StyledImageContainer>
         ))}
       </RowWrapper>
+      <ScrollDownButton to="/#projects-section" />
     </Section>
   )
 }

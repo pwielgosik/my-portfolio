@@ -6,14 +6,13 @@ import Img from "gatsby-image"
 import ProjectDetails from "./ProjectDetails"
 import styled from "styled-components"
 import actions from "../data/actions"
-import ScrollDownButton from "./ScrollDownButton"
 
 const StyledImageContainer = styled.div`
-  height: 180px;
   width: 350px;
   margin: 1.5rem;
   @media (max-width: ${({ theme }) => theme.media.phone}) {
-    width: 100vw;
+    min-width: 30%;
+    height: auto;
   }
   /* border: 1px solid rgba(0, 0, 0, 0.5); */
   border-radius: 5px;
@@ -21,6 +20,10 @@ const StyledImageContainer = styled.div`
 
   img {
     margin: 0;
+  }
+  .gatsby-image-wrapper {
+    opacity: 0.7;
+    height: 100%;
   }
   cursor: pointer;
   filter: grayscale(80%);
@@ -122,7 +125,7 @@ const ProjectsSection = () => {
       title="Projects I made"
       id="projects-section"
     >
-      <RowWrapper width="960px" left>
+      <RowWrapper width="100%">
         {data.projectsData.nodes.map(project => {
           const isOpen = Boolean(openProjects.find(p => p.id === project.id))
           return (
@@ -131,10 +134,7 @@ const ProjectsSection = () => {
                 key={project.id}
                 onClick={() => handleClick(project, isOpen)}
               >
-                <Img
-                  style={{ opacity: 0.9, height: "100%" }}
-                  fluid={project.src.childImageSharp.fluid}
-                />
+                <Img fluid={project.src.childImageSharp.fluid} />
                 <StyledProjectTooltip>{project.name}</StyledProjectTooltip>
               </StyledImageContainer>
               <ProjectDetails
@@ -147,7 +147,6 @@ const ProjectsSection = () => {
           )
         })}
       </RowWrapper>
-      <ScrollDownButton to="/#about-me-section" />
     </Section>
   )
 }
