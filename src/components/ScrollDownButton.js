@@ -22,6 +22,10 @@ const StyledScrollDownButton = styled.button`
     height: 100%;
     width: 100%;
   }
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
+    height: 36px;
+    width: 60px;
+  }
 `
 
 const ScrollDownButton = ({ to }) => {

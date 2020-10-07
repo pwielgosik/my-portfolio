@@ -23,8 +23,13 @@ const StyledScrollUpButton = styled.div`
 
   svg {
     display: block;
-    height: 30px;
+    height: 20px;
     width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.phone}) {
+    height: 60px;
+    width: 60px;
   }
 `
 
