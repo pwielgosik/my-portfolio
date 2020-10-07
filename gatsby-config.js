@@ -49,6 +49,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-anchor-links`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Futura T OT Medium"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

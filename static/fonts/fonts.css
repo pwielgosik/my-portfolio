@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Futura T OT Medium";
+  src: url("futura-t-ot-medium.eot") format("eot");
+  src: url("futura-t-ot-medium.woff2") format("woff2"),
+    url("futura-t-ot-medium.woff") format("woff"),
+    url("futura-t-ot-medium.ttf") format("truetype"),
+    url("futura-t-ot-medium.svg") format("svg"),
+    url("futura-t-ot-medium.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -64,22 +64,6 @@ export const Button = styled.button`
   border: ${({ primary, light }) =>
     (primary && "none") || (light && "rgba(0,0,0,.4) solid 2px") || "none"};
 
-  ${({ menu, theme }) =>
-    menu &&
-    `background-color: transparent;
-        color: rgba(255,255,255, 1);
-        padding: 0 2rem 0;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        font-family: 'Futura T OT Light';
-        margin: 0;
-        position: relative;
-
-        &:hover{
-            color: rgba(255,255,255, .6);
-        }
-        `}
-
   &:active {
     background-color: ${({
       transparent,
