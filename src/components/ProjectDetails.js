@@ -59,6 +59,8 @@ const StyledProjectDetails = styled.div`
     margin: 2rem;
     h3 {
       margin: auto auto 1rem;
+      width: 100%;
+      display: block;
     }
     p {
       font-size: 1.4rem;
