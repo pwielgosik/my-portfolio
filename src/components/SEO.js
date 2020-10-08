@@ -85,7 +85,15 @@ function SEO({ description, lang, meta, title }) {
         type="font/woff2"
         crossOrigin="anonymous"
       /> */}
-      <link rel="preload" as="stylesheet" href="/fonts/fonts.css" media="all" />
+      <link
+        rel="preload"
+        href="/fonts/fonts.css"
+        as="style"
+        onload="this.rel='stylesheet'"
+      />
+
+      {/* <link rel="preload" as="stylesheet" href="/fonts/fonts.css" media="all" />
+      <link rel="stylesheet" href="/fonts/fonts.css" media="all" /> */}
     </Helmet>
   )
 }
