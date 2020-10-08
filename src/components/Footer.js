@@ -1,7 +1,6 @@
 import React from "react"
 import { StyledFooter } from "../styles/Layout.styled"
-import { ColumnWrapper, RowWrapper } from "../styles/Wrappers.styled"
-
+import { ColumnWrapper } from "../styles/Wrappers.styled"
 import { StyledFooterSocials } from "../styles/Layout.styled"
 import GithubIcon from "../images/github.svg"
 import LinkedInIcon from "../images/linkedin.svg"

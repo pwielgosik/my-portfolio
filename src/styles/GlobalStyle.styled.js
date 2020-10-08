@@ -94,7 +94,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 2.6rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -141,7 +141,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace;
+  font-family: 'Futura T OT Medium', monospace;
   font-size: 1em;
 }
 figure {
@@ -274,7 +274,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 2.5rem;
   color: ${({ theme }) => theme.colors.light};
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -292,7 +292,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 2.5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -309,7 +309,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 2.5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -326,7 +326,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 2.5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -343,7 +343,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 2.5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Futura T OT Medium', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -583,7 +583,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+  font-family: 'Futura T OT Medium', "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;

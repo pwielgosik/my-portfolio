@@ -1,51 +1,23 @@
 import React, { useState, useEffect } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { StyledScrollUpButton } from "../styles/Buttons.styled"
 import ScrollUpSvg from "../images/scroll-up-icon.svg"
-
-import styled from "styled-components"
-
-const StyledScrollUpButton = styled.div`
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  /* border: 3px solid #debf84; */
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  width: 80px;
-  transition: opacity 0.2s ease-in-out;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-  pointer-events: ${({ isVisible }) => (isVisible ? "auto" : "none")};
-  background-color: white;
-  transform: rotate(180deg);
-
-  svg {
-    display: block;
-    height: 20px;
-    width: 100%;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.phone}) {
-    height: 60px;
-    width: 60px;
-  }
-`
 
 const ScrollUpButton = () => {
   const [isVisible, setIsVisible] = useState(null)
 
+  const toggleScrollButton = () => {
+    const scrollY = window.scrollY
+    if (scrollY >= 300) {
+      return setIsVisible(true)
+    } else {
+      return setIsVisible(false)
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY
-      if (scrollY >= 300) {
-        return setIsVisible(true)
-      } else {
-        return setIsVisible(false)
-      }
-    })
-    return () => window.removeEventListener("scroll")
+    window.addEventListener("scroll", toggleScrollButton)
+    return () => window.removeEventListener("scroll", toggleScrollButton)
   }, [])
 
   return (

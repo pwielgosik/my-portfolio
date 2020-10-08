@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { MobileMenuWrapper } from "./MobileSideMenu.styled"
+import { MobileMenuWrapper } from "../styles/MobileSideMenu.styled"
 import { MobileSideMenuButton } from "../styles/Buttons.styled"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StyledMobileSocials } from "../styles/Layout.styled"

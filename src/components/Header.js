@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { StyledHeader } from "../styles/Layout.styled"
-import { ColumnWrapper } from "../styles/Wrappers.styled"
-
 import Nav from "./Nav"
 import MobileSideMenu from "./MobileSideMenu"
 import Hamburger from "./Hamburger"
+import { StyledHeader } from "../styles/Layout.styled"
+import { ColumnWrapper } from "../styles/Wrappers.styled"
 
 const Header = ({ siteTitle }) => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)

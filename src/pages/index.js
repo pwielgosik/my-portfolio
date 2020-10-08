@@ -18,12 +18,6 @@ const IndexPage = () => (
     <Introduction />
     <StackSection />
     <ProjectsSection />
-    {/* <AboutMeSection />
-    <ContactSection /> */}
-
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `2.6rem` }}>
-      <Image />
-    </div> */}
   </Layout>
 )
 

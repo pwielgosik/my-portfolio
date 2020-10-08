@@ -1,8 +1,8 @@
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StyledNav, StyledLinks, StyledSocials } from "../styles/Layout.styled"
 import GithubIcon from "../images/github.svg"
 import LinkedInIcon from "../images/linkedin.svg"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Nav = () => {
   return (

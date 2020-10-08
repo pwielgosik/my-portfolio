@@ -1,69 +1,14 @@
-import React, { useEffect, useReducer } from "react"
-import Section from "./Section"
-import { RowWrapper } from "../styles/Wrappers.styled"
+import React, { useReducer } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import ProjectDetails from "./ProjectDetails"
-import styled from "styled-components"
 import actions from "../data/actions"
-
-const StyledImageContainer = styled.div`
-  width: 350px;
-  margin: 1.5rem;
-  @media (max-width: ${({ theme }) => theme.media.phone}) {
-    min-width: 30%;
-    height: auto;
-  }
-  /* border: 1px solid rgba(0, 0, 0, 0.5); */
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
-
-  img {
-    margin: 0;
-  }
-  .gatsby-image-wrapper {
-    opacity: 0.7;
-    height: 100%;
-  }
-  cursor: pointer;
-  filter: grayscale(80%);
-
-  /* &:hover {
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.2);
-    z-index: 10;
-  } */
-  position: relative;
-  &:hover {
-    transition: filter 0.2s ease-in-out;
-
-    filter: grayscale(0);
-
-    div {
-      opacity: 1;
-    }
-  }
-`
-const StyledProjectTooltip = styled.div`
-  opacity: 0;
-  font-size: 1.6rem;
-  position: absolute;
-  width: 90%;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.primary};
-
-  padding: 10px;
-
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  border-radius: 5px;
-  transition: opacity 0.2s ease-in-out;
-
-  align-self: center;
-  text-align: center;
-`
+import Section from "./Section"
+import ProjectDetails from "./ProjectDetails"
+import {
+  StyledImageContainer,
+  StyledProjectTooltip,
+} from "../styles/ProjectsSection.styled"
+import { RowWrapper } from "../styles/Wrappers.styled"
 
 const ProjectsSection = () => {
   const data = useStaticQuery(graphql`
