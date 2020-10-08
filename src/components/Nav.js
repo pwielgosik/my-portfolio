@@ -8,11 +8,11 @@ const Nav = () => {
   return (
     <StyledNav>
       <StyledLinks id="nav-links-list">
-        <li id="nav-links-list-item">
+        {/* <li id="nav-links-list-item">
           <AnchorLink to="/#about-me-section" id="nav-link">
             about me
           </AnchorLink>
-        </li>
+        </li> */}
         <li id="nav-links-list-item">
           <a id="nav-link" target="_blank">
             resume
