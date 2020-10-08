@@ -40,7 +40,7 @@ const Introduction = () => {
           <Button
             as={AnchorLink}
             minWidth="250px"
-            to="/#projects-section"
+            to={`/#projects-section`}
             secondary
           >
             look at my projects
@@ -51,6 +51,7 @@ const Introduction = () => {
             <a
               id="mobile-nav-socials-link"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
             >
               <LinkedInIcon />
@@ -60,13 +61,14 @@ const Introduction = () => {
             <a
               id="mobile-nav-socials-link"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/S50B32"
             >
               <GithubIcon />
             </a>
           </li>
         </StyledMobileSocials>
-        <ScrollDownButton to="/#technologies-section" />
+        <ScrollDownButton to={`/#technologies-section`} />
       </StyledIntroductionContainer>
     </section>
   )

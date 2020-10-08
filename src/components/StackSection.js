@@ -14,6 +14,7 @@ const StackSection = () => {
     query {
       allStackImagesJson {
         nodes {
+          id
           name
           src {
             childImageSharp {
@@ -36,13 +37,13 @@ const StackSection = () => {
     >
       <RowWrapper width="100%" margin="auto">
         {data.allStackImagesJson.nodes.map(tech => (
-          <StyledImageContainer>
+          <StyledImageContainer key={tech.id}>
             <Img fluid={tech.src.childImageSharp.fluid} />
             <StyledTooltip>{tech.name}</StyledTooltip>
           </StyledImageContainer>
         ))}
       </RowWrapper>
-      <ScrollDownButton to="/#projects-section" />
+      <ScrollDownButton to={`/#projects-section`} />
     </Section>
   )
 }

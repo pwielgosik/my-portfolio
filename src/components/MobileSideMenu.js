@@ -15,7 +15,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link"
             primary
             as={AnchorLink}
-            to=""
+            to={`/`}
           >
             about me
           </MobileSideMenuButton>
@@ -25,7 +25,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link"
             primary
             as={AnchorLink}
-            to="/"
+            to={`/`}
           >
             resume
           </MobileSideMenuButton>
@@ -35,7 +35,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link"
             primary
             as={AnchorLink}
-            to="/#technologies-section"
+            to={`/#technologies-section`}
           >
             stack
           </MobileSideMenuButton>
@@ -45,7 +45,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link"
             primary
             as={AnchorLink}
-            to="/#projects-section"
+            to={`/#projects-section`}
           >
             projects
           </MobileSideMenuButton>
@@ -56,6 +56,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
           <a
             id="mobile-nav-socials-link"
             target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
           >
             <LinkedInIcon />
@@ -65,6 +66,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
           <a
             id="mobile-nav-socials-link"
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/S50B32"
           >
             <GithubIcon />

@@ -21,7 +21,7 @@ const ScrollUpButton = () => {
   }, [])
 
   return (
-    <StyledScrollUpButton isVisible={isVisible} as={AnchorLink} to="/#header">
+    <StyledScrollUpButton isVisible={isVisible} as={AnchorLink} to={`/#header`}>
       <ScrollUpSvg />
     </StyledScrollUpButton>
   )

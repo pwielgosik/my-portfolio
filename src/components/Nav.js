@@ -9,22 +9,22 @@ const Nav = () => {
     <StyledNav>
       <StyledLinks id="nav-links-list">
         <li id="nav-links-list-item">
-          <AnchorLink to="/" id="nav-link">
+          <a to={`/`} id="nav-link">
             about me
-          </AnchorLink>
+          </a>
         </li>
         <li id="nav-links-list-item">
-          <a id="nav-link" target="_blank">
+          <a id="nav-link" target="_blank" rel="noreferrer">
             resume
           </a>
         </li>
         <li id="nav-links-list-item">
-          <AnchorLink to="/#technologies-section" id="nav-link">
+          <AnchorLink to={`/#technologies-section`} id="nav-link">
             technologies
           </AnchorLink>
         </li>
         <li id="nav-links-list-item">
-          <AnchorLink to="/#projects-section" id="nav-link">
+          <AnchorLink to={`/#projects-section`} id="nav-link">
             projects
           </AnchorLink>
         </li>
@@ -40,7 +40,12 @@ const Nav = () => {
           </a>
         </li>
         <li id="nav-socials-list-item">
-          <a id="nav-link" target="_blank" href="https://github.com/S50B32">
+          <a
+            id="nav-link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/S50B32"
+          >
             <GithubIcon />
           </a>
         </li>

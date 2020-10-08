@@ -40,6 +40,7 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
               style={{ width: 200 }}
               as="a"
               target="_blank"
+              rel="noreferrer"
               href={project.liveSrc}
               primary
             >
@@ -50,6 +51,7 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
             style={{ width: 200 }}
             as="a"
             target="_blank"
+            rel="noreferrer"
             href={project.githubSrc}
             secondary
           >

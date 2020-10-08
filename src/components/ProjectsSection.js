@@ -74,9 +74,8 @@ const ProjectsSection = () => {
         {data.projectsData.nodes.map(project => {
           const isOpen = Boolean(openProjects.find(p => p.id === project.id))
           return (
-            <>
+            <div key={project.id}>
               <StyledImageContainer
-                key={project.id}
                 onClick={() => handleClick(project, isOpen)}
               >
                 <Img fluid={project.src.childImageSharp.fluid} />
@@ -88,7 +87,7 @@ const ProjectsSection = () => {
                 technologies={data.technologies}
                 dispatch={dispatch}
               />
-            </>
+            </div>
           )
         })}
       </RowWrapper>

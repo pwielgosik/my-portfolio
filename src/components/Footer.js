@@ -14,13 +14,19 @@ const Footer = () => {
             <a
               id="nav-link"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
             >
               <LinkedInIcon />
             </a>
           </li>
           <li id="nav-socials-list-item">
-            <a id="nav-link" target="_blank" href="https://github.com/S50B32">
+            <a
+              id="nav-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/S50B32"
+            >
               <GithubIcon />
             </a>
           </li>

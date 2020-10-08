@@ -13,7 +13,7 @@ const NotFoundPage = () => (
     <ColumnWrapper id="404-wrapper" width="100%">
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       <h1>404: Not Found</h1>
-      <Button secondary as={Link} to="/">
+      <Button secondary as={Link} to={`/`}>
         Come back
       </Button>
     </ColumnWrapper>

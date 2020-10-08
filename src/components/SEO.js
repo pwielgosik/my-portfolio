@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import fontUrl from "../../static/fonts/futura-t-ot-medium.woff2"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -69,7 +70,15 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        rel="preload"
+        as="font"
+        href={fontUrl}
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+    </Helmet>
   )
 }
 
