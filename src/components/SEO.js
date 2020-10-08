@@ -71,13 +71,21 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <link
+      {/* <link
         rel="preload"
         as="font"
         href={fontUrl}
         type="font/woff2"
         crossOrigin="anonymous"
       />
+      <link
+        rel="preload"
+        as="stylesheet"
+        href={fontUrl}
+        type="font/woff2"
+        crossOrigin="anonymous"
+      /> */}
+      <link rel="preload" as="stylesheet" href="/fonts/fonts.css" media="all" />
     </Helmet>
   )
 }
