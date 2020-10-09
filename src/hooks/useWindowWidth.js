@@ -12,6 +12,7 @@ const useWindowWidth = () => {
   // in this case useEffect will execute only once because
   // it does not have any dependencies.
   useEffect(() => {
+    if (width === null) setWidth(getWindowWidth())
     // timeoutId for debounce mechanism
     let timeoutId = null
     const resizeListener = () => {
