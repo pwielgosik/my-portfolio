@@ -8,26 +8,29 @@ import LinkedInIcon from "../images/linkedin.svg"
 const Footer = () => {
   return (
     <StyledFooter>
+      <h2>Footer</h2>
       <ColumnWrapper width="100%" margin="0">
         <StyledFooterSocials id="nav-socials-list">
           <li id="footer-socials-list-item">
             <a
-              id="nav-link"
+              id="footer-link-linkedin"
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
+              aria-label="Proceed to my LinkedIn profile"
             >
-              <LinkedInIcon />
+              <LinkedInIcon aria-hidden="true" alt="LinkedIn logo icon" />
             </a>
           </li>
           <li id="nav-socials-list-item">
             <a
-              id="nav-link"
+              id="footer-link-github"
               target="_blank"
               rel="noreferrer"
               href="https://github.com/S50B32"
+              aria-label="Proceed to my GitHub profile"
             >
-              <GithubIcon />
+              <GithubIcon aria-hidden="true" alt="GitHub logo icon" />
             </a>
           </li>
         </StyledFooterSocials>

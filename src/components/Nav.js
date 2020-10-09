@@ -1,56 +1,40 @@
-import React from "react"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { StyledNav, StyledLinks, StyledSocials } from "../styles/Layout.styled"
-import GithubIcon from "../images/github.svg"
-import LinkedInIcon from "../images/linkedin.svg"
+import React, { useState, useEffect } from "react"
+import DesktopMenu from "./DesktopMenu"
+import Hamburger from "./Hamburger"
+import MobileSideMenu from "./MobileSideMenu"
+import theme from "../styles/theme"
+import { ColumnWrapper } from "../styles/Wrappers.styled"
+import useWindowWidth from "../hooks/useWindowWidth"
+
+const breakpointWidth = parseInt(theme.media.phone)
 
 const Nav = () => {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
+  const windowWidth = useWindowWidth()
+
+  const toggleSideMenu = () => {
+    setIsSideMenuOpen(!isSideMenuOpen)
+  }
+
   return (
-    <StyledNav>
-      <StyledLinks id="nav-links-list">
-        <li id="nav-links-list-item">
-          <a to={`/`} id="nav-link">
-            about me
-          </a>
-        </li>
-        <li id="nav-links-list-item">
-          <a id="nav-link" target="_blank" rel="noreferrer">
-            resume
-          </a>
-        </li>
-        <li id="nav-links-list-item">
-          <AnchorLink to={`/#technologies-section`} id="nav-link">
-            technologies
-          </AnchorLink>
-        </li>
-        <li id="nav-links-list-item">
-          <AnchorLink to={`/#projects-section`} id="nav-link">
-            projects
-          </AnchorLink>
-        </li>
-      </StyledLinks>
-      <StyledSocials id="nav-socials-list">
-        <li id="nav-socials-list-item">
-          <a
-            id="nav-link"
-            target="_blank"
-            href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
-          >
-            <LinkedInIcon />
-          </a>
-        </li>
-        <li id="nav-socials-list-item">
-          <a
-            id="nav-link"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/S50B32"
-          >
-            <GithubIcon />
-          </a>
-        </li>
-      </StyledSocials>
-    </StyledNav>
+    <ColumnWrapper as="nav" width="650px" margin="0 auto 0" top>
+      <h2>Navigation</h2>
+      {windowWidth <= breakpointWidth ? (
+        <>
+          <Hamburger
+            id="hamburger-button"
+            toggleSideMenu={toggleSideMenu}
+            isOpen={isSideMenuOpen}
+          />
+          <MobileSideMenu
+            toggleSideMenu={toggleSideMenu}
+            isOpen={isSideMenuOpen}
+          />
+        </>
+      ) : (
+        <DesktopMenu />
+      )}
+    </ColumnWrapper>
   )
 }
 

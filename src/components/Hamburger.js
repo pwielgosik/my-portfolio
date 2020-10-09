@@ -4,10 +4,10 @@ import { HamburgerButton, InnerHamburger } from "../styles/Hamburger.styled"
 const Hamburger = ({ toggleSideMenu, isOpen }) => {
   return (
     <HamburgerButton
-      aria-label="Otwórz/zamknij menu nawigacyjne"
+      aria-label="Open/close navigation"
       onClick={toggleSideMenu}
     >
-      <InnerHamburger aria-hidden="true" isOpen={isOpen} />
+      <InnerHamburger aria-hidden="true" isOpen={isOpen} alt="Hamburger icon" />
     </HamburgerButton>
   )
 }

@@ -84,7 +84,7 @@ export const StyledScrollUpButton = styled.div`
   }
 `
 export const StyledScrollDownButton = styled.button`
-  margin: auto;
+  margin: auto auto 8rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -103,5 +103,6 @@ export const StyledScrollDownButton = styled.button`
   @media (max-width: ${({ theme }) => theme.media.phone}) {
     height: 36px;
     width: 60px;
+    margin: auto auto 1rem;
   }
 `

@@ -4,10 +4,8 @@ import { RowWrapper } from "../styles/Wrappers.styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import ScrollDownButton from "./ScrollDownButton"
-import {
-  StyledTooltip,
-  StyledImageContainer,
-} from "../styles/StackSection.styled"
+import { StyledImageContainer } from "../styles/StackSection.styled"
+import { StyledTooltip } from "../styles/Layout.styled"
 
 const StackSection = () => {
   const data = useStaticQuery(graphql`
@@ -35,10 +33,22 @@ const StackSection = () => {
       wBackground
       style={{ justifyContent: "space-evenly" }}
     >
-      <RowWrapper width="100%" margin="auto">
+      <RowWrapper
+        width="100%"
+        margin="auto"
+        as="ul"
+        id="known-technologies-list"
+      >
         {data.allStackImagesJson.nodes.map(tech => (
-          <StyledImageContainer key={tech.id}>
-            <Img fluid={tech.src.childImageSharp.fluid} />
+          <StyledImageContainer
+            key={tech.id}
+            as="li"
+            id="known-technologies-list-item"
+          >
+            <Img
+              fluid={tech.src.childImageSharp.fluid}
+              alt={`${tech.name} logotype`}
+            />
             <StyledTooltip>{tech.name}</StyledTooltip>
           </StyledImageContainer>
         ))}

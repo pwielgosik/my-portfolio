@@ -27,7 +27,7 @@ const BackgroundSection = ({ className, children }) => (
 
       return (
         <BackgroundImage
-          Tag="section"
+          Tag="div"
           className={className}
           fluid={imageData}
           backgroundColor={`rgba(11, 120, 105, 1)`}

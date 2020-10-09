@@ -1,32 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import Nav from "./Nav"
-import MobileSideMenu from "./MobileSideMenu"
-import Hamburger from "./Hamburger"
 import { StyledHeader } from "../styles/Layout.styled"
-import { ColumnWrapper } from "../styles/Wrappers.styled"
 
 const Header = ({ siteTitle }) => {
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
-
-  const toggleSideMenu = () => {
-    setIsSideMenuOpen(!isSideMenuOpen)
-  }
   return (
     <StyledHeader id="header">
-      <ColumnWrapper width="960px" margin="0 auto 0" top>
-        <Hamburger
-          id="hamburger-button"
-          toggleSideMenu={toggleSideMenu}
-          isOpen={isSideMenuOpen}
-        />
-        <MobileSideMenu
-          toggleSideMenu={toggleSideMenu}
-          isOpen={isSideMenuOpen}
-        />
-        <Nav />
-        <h1>{siteTitle}</h1>
-      </ColumnWrapper>
+      <h1>{siteTitle}</h1>
+      <Nav />
     </StyledHeader>
   )
 }

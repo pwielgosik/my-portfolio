@@ -4,11 +4,8 @@ import Img from "gatsby-image"
 import actions from "../data/actions"
 import Section from "./Section"
 import ProjectDetails from "./ProjectDetails"
-import {
-  StyledImageContainer,
-  StyledProjectTooltip,
-} from "../styles/ProjectsSection.styled"
-import { RowWrapper } from "../styles/Wrappers.styled"
+import { StyledImageContainer } from "../styles/ProjectsSection.styled"
+import { ColumnWrapper } from "../styles/Wrappers.styled"
 
 const ProjectsSection = () => {
   const data = useStaticQuery(graphql`
@@ -70,27 +67,37 @@ const ProjectsSection = () => {
       title="Projects I made"
       id="projects-section"
     >
-      <RowWrapper width="100%">
+      <ColumnWrapper width="100%" margin="auto">
         {data.projectsData.nodes.map(project => {
           const isOpen = Boolean(openProjects.find(p => p.id === project.id))
           return (
-            <div key={project.id}>
-              <StyledImageContainer
-                onClick={() => handleClick(project, isOpen)}
-              >
-                <Img fluid={project.src.childImageSharp.fluid} />
-                <StyledProjectTooltip>{project.name}</StyledProjectTooltip>
-              </StyledImageContainer>
+            <>
+              {!isOpen && (
+                <>
+                  <StyledImageContainer
+                    onClick={() => handleClick(project, isOpen)}
+                    aria-label={`Proceed to the detailed article about ${project.name} project`}
+                  >
+                    <h3 style={{ lineHeight: 0 }}>{project.name}</h3>
+
+                    <Img
+                      fluid={project.src.childImageSharp.fluid}
+                      alt={`View of the project ${project.name}`}
+                      aria-label="hidden"
+                    />
+                  </StyledImageContainer>
+                </>
+              )}
               <ProjectDetails
                 project={project}
                 isOpen={isOpen}
                 technologies={data.technologies}
                 dispatch={dispatch}
               />
-            </div>
+            </>
           )
         })}
-      </RowWrapper>
+      </ColumnWrapper>
     </Section>
   )
 }

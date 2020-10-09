@@ -1,29 +1,41 @@
 import styled from "styled-components"
 
-export const StyledImageContainer = styled.div`
+export const StyledImageContainer = styled.article`
   position: relative;
-  width: 350px;
-  margin: 1.5rem;
+  width: 70%;
+  margin: 0;
   border-radius: 5px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  filter: grayscale(80%);
+  transition: all 0.4s ease-in-out;
+
+  h3 {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  &:hover {
+    margin-top: 1.5rem;
+
+    h3 {
+      opacity: 1;
+    }
+  }
   img {
     margin: 0;
   }
   .gatsby-image-wrapper {
+    width: auto;
+    transition: all 0.4s ease-in-out;
     opacity: 0.7;
-    height: 100%;
-  }
-  &:hover {
-    transition: filter 0.2s ease-in-out;
-    filter: grayscale(0);
-    div {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+    filter: grayscale(80%);
+    &:hover {
       opacity: 1;
+      filter: grayscale(0);
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
     }
   }
   @media (max-width: ${({ theme }) => theme.media.phone}) {
-    min-width: 30%;
+    width: 80%;
     height: auto;
   }
 `

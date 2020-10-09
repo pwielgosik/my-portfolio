@@ -12,7 +12,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
       <ul id="mobile-nav">
         <li id="mobile-nav-item" onClick={toggleSideMenu}>
           <MobileSideMenuButton
-            id="mobile-nav-link"
+            id="mobile-nav-link-about_me"
             primary
             as={AnchorLink}
             to={`/`}
@@ -22,7 +22,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
         </li>
         <li id="mobile-nav-item" onClick={toggleSideMenu}>
           <MobileSideMenuButton
-            id="mobile-nav-link"
+            id="mobile-nav-link-resume"
             primary
             as={AnchorLink}
             to={`/`}
@@ -42,7 +42,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
         </li>
         <li id="mobile-nav-item" onClick={toggleSideMenu}>
           <MobileSideMenuButton
-            id="mobile-nav-link"
+            id="mobile-nav-link-technologies"
             primary
             as={AnchorLink}
             to={`/#projects-section`}
@@ -54,22 +54,24 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
       <StyledMobileSocials id="nav-socials-list">
         <li id="mobile-nav-socials-list-item">
           <a
-            id="mobile-nav-socials-link"
+            id="mobile-nav-link-linkedin"
             target="_blank"
             rel="noreferrer"
             href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
+            aria-label="Proceed to my LinkedIn profile"
           >
-            <LinkedInIcon />
+            <LinkedInIcon aria-hidden="true" alt="LinkedIn logo icon" />
           </a>
         </li>
         <li id="mobile-nav-socials-list-item">
           <a
-            id="mobile-nav-socials-link"
+            id="mobile-nav-link-github"
             target="_blank"
             rel="noreferrer"
             href="https://github.com/S50B32"
+            aria-label="Proceed to my GitHub profile"
           >
-            <GithubIcon />
+            <GithubIcon aria-hidden="true" alt="GitHub logo icon" />
           </a>
         </li>
       </StyledMobileSocials>

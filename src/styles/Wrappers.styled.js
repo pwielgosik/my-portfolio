@@ -7,6 +7,7 @@ export const ResponsiveWidthWrapper = styled.div`
   min-height: ${({ minHeight }) => minHeight};
 
   background-color: ${({ background }) => background};
+  padding: ${({ padding }) => padding};
 
   box-shadow: ${({ shadow }) =>
     shadow && `0px 0px 30px 0px rgba(0, 0, 0, 0.08);`};

@@ -5,21 +5,21 @@
     "liveSrc": "https://5f6eabdefc813e9d4cf2473d--jaglana.netlify.app/",
     "githubSrc": "https://github.com/S50B32/jaglana-shop",
     "stack": [
-      "HTML",
-      "CSS",
+      "HTML5",
+      "CSS3",
       "React",
-      "GatsbyJS",
+      "Gatsby",
       "GraphQL",
       "WordPress",
       "WooCommerce"
     ],
-    "description": "My most ambitious commercial project which I am very proud of. It took a lot of effort to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless content management system and built an individual front-end myself, including design and coding. I also understood the principles of communication between a pretty unfriendly Wordpress/Woocommerce GraphQL API and the UI layer."
+    "description": "My most ambitious commercial project which I am very proud of. It took a lot of effort to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless content management system and built an individual front-end myself, including design and coding. I also understood the principles of communication between a rather unfriendly, still being developed Wordpress/Woocommerce GraphQL API and the UI layer."
   },
   {
     "name": "Jaglana Homepage",
     "src": "../images/projects/jaglana-home.jpg",
     "githubSrc": "https://github.com/S50B32/jaglana-homepage",
-    "stack": ["HTML", "CSS", "React", "GatsbyJS", "GraphQL"],
+    "stack": ["HTML5", "CSS3", "React", "Gatsby", "GraphQL"],
     "description": "Project with which I won my first client. A simple design which shown my skills to the restaurant owner and led to further cooperation between us. I got to know some new tools such as GatsbyJS, GraphQL and styled-components."
   },
   {
@@ -27,7 +27,7 @@
     "src": "../images/projects/f1-database.jpg",
     "liveSrc": "https://s50b32.github.io/f1-lineup/",
     "githubSrc": "https://github.com/S50B32/f1-lineup",
-    "stack": ["HTML", "CSS", "React"],
+    "stack": ["HTML5", "CSS3", "React"],
     "description": "My first React project, including some more complex concepts than a simple to-do list. React Router and dynamic data fetching from a simple API were implemented. Despite its relative simplicity, F1 Database helped me to understand some basic React techniques and furtherly excercise my CSS skills."
   }
 ]

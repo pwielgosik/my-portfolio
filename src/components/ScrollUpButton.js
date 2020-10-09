@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StyledScrollUpButton } from "../styles/Buttons.styled"
-import ScrollUpSvg from "../images/scroll-up-icon.svg"
+import ScrollUpSvg from "../images/arrow-icon.svg"
 
 const ScrollUpButton = () => {
   const [isVisible, setIsVisible] = useState(null)
@@ -21,8 +21,13 @@ const ScrollUpButton = () => {
   }, [])
 
   return (
-    <StyledScrollUpButton isVisible={isVisible} as={AnchorLink} to={`/#header`}>
-      <ScrollUpSvg />
+    <StyledScrollUpButton
+      isVisible={isVisible}
+      as={AnchorLink}
+      to={`/#header`}
+      aria-label="Scroll up to page header"
+    >
+      <ScrollUpSvg aria-hidden="true" alt="Arrow up" />
     </StyledScrollUpButton>
   )
 }

@@ -7,10 +7,10 @@ import {
   BackgroundWrapper,
   StyledProjectDetails,
   CloseModalButton,
-  StyledTechTooltip,
   StyledTechContainer,
   StyledTechWrapper,
 } from "../styles/ProjectDetails.styled"
+import { StyledTooltip } from "../styles/Layout.styled"
 
 const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
   useEffect(() => {
@@ -30,10 +30,11 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
           onClick={() =>
             dispatch({ type: actions.HIDE_DETAILS, payload: project })
           }
+          aria-label="Close this window"
         >
           ✖
         </CloseModalButton>
-        <RowWrapper style={{ margin: "0 1rem 1rem" }}>
+        <RowWrapper as="header" style={{ margin: "0 1rem 1rem" }}>
           <h3>{project.name}</h3>
           {project.liveSrc && (
             <Button
@@ -55,26 +56,39 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
             href={project.githubSrc}
             secondary
           >
-            Github
+            GitHub
           </Button>
         </RowWrapper>
-        <Img
-          fluid={project.src.childImageSharp.fluid}
-          style={{ boxShadow: "0 5px 15px rgba(0,0,0,.1)", borderRadius: 5 }}
-        />
-        <RowWrapper left style={{ margin: "1rem" }}>
-          <p>{project.description}</p>
-        </RowWrapper>
-        <StyledTechContainer>
-          {technologies.nodes
-            .filter(tech => project.stack.includes(tech.name))
-            .map(tech => (
-              <StyledTechWrapper>
-                <Img fluid={tech.src.childImageSharp.fluid} />
-                <StyledTechTooltip>{tech.name}</StyledTechTooltip>
-              </StyledTechWrapper>
-            ))}
-        </StyledTechContainer>
+        <section>
+          <h4>Description</h4>
+          <Img
+            as="figure"
+            fluid={project.src.childImageSharp.fluid}
+            alt={`View of the project ${project.name}`}
+            aria-label="hidden"
+          />
+          <RowWrapper left style={{ margin: "1rem" }}>
+            <p>{project.description}</p>
+          </RowWrapper>
+        </section>
+        <section>
+          <h4>Used technologies</h4>
+          <StyledTechContainer as="ul">
+            {technologies.nodes
+              .filter(tech => project.stack.includes(tech.name))
+              .map(tech => (
+                <StyledTechWrapper as="li" key={tech.id}>
+                  <Img
+                    fluid={tech.src.childImageSharp.fluid}
+                    alt={tech.name}
+                    aria-hidden="true"
+                    aria-label={tech.name}
+                  />
+                  <StyledTooltip>{tech.name}</StyledTooltip>
+                </StyledTechWrapper>
+              ))}
+          </StyledTechContainer>
+        </section>
         <RowWrapper style={{ margin: "1rem" }}>
           <Button
             style={{ width: 200 }}

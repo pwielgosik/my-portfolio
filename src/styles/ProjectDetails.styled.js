@@ -14,7 +14,7 @@ export const BackgroundWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const StyledProjectDetails = styled.div`
+export const StyledProjectDetails = styled.article`
   z-index: 2;
   max-width: 100vw;
   max-height: 100vh;
@@ -28,9 +28,14 @@ export const StyledProjectDetails = styled.div`
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
   max-height: 95vh;
   padding: 1rem 5rem 1rem;
+
   h3 {
     margin: auto auto auto 0;
     color: ${({ theme }) => theme.colors.primary};
+  }
+  h4,
+  h5 {
+    display: none;
   }
   p {
     text-align: left;
@@ -39,6 +44,7 @@ export const StyledProjectDetails = styled.div`
     font-size: 1.6rem;
     line-height: 1.5;
   }
+
   @media (max-width: ${({ theme }) => theme.media.phone}) {
     padding: 1rem 2.5rem 0rem;
     margin: 1.5rem;
@@ -62,19 +68,7 @@ export const StyledProjectDetails = styled.div`
     }
   }
 `
-export const StyledTechTooltip = styled.div`
-  display: none;
-  position: absolute;
-  background-color: white;
-  padding: 10px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  border-radius: 5px;
-  align-self: center;
-  text-align: center;
-`
+
 export const StyledTechContainer = styled(RowWrapper)`
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -87,7 +81,8 @@ export const StyledTechWrapper = styled.div`
   position: relative;
   &:hover {
     div {
-      display: block;
+      transition-delay: 0.7s;
+      opacity: 1;
     }
   }
   @media (max-width: ${({ theme }) => theme.media.phone}) {

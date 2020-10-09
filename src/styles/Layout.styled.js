@@ -2,12 +2,13 @@ import styled from "styled-components"
 
 export const StyledHeader = styled.header`
   z-index: 1;
-  h1 {
+  h1,
+  h2 {
     display: none;
   }
 `
 
-export const StyledNav = styled.nav`
+export const StyledDesktopNav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,13 +47,12 @@ export const StyledNav = styled.nav`
 
 export const StyledSection = styled.section`
   width: 100vw;
+  min-height: 100vh;
   background: ${({ wBackground }) =>
     wBackground ? "linear-gradient(to right, #130a2b, #0b7869)" : "white"};
-  padding: 1rem 0 1rem;
   position: relative;
-  height: 100vh;
   @media (max-width: ${({ theme }) => theme.media.phone}) {
-    padding: 0 5rem 0;
+    height: auto;
   }
   h2 {
     display: none;
@@ -63,6 +63,10 @@ export const StyledSection = styled.section`
     font-size: 2.8rem;
     align-self: flex-start;
     margin: 5rem 0 1rem;
+
+    @media (max-width: ${({ theme }) => theme.media.phone}) {
+      margin: 1rem 0 1rem;
+    }
   }
   p {
     color: ${({ wBackground, theme }) =>
@@ -113,6 +117,9 @@ export const StyledFooter = styled.footer`
     margin: 1rem;
     font-size: 1.4rem;
   }
+  h2 {
+    display: none;
+  }
 `
 
 export const StyledMobileSocials = styled.ul`
@@ -134,4 +141,22 @@ export const StyledMobileSocials = styled.ul`
     flex-direction: row !important;
     justify-content: center !important;
   }
+`
+export const StyledTooltip = styled.div`
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  z-index: 1;
+  border-radius: 5px;
+  align-self: center;
+  text-align: center;
+  font-size: 1.4rem;
+  min-width: 100px;
+  border: 1px black solid;
+  opacity: 0;
+
+  transition: opacity ease-in-out 0.1s;
 `

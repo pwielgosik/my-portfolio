@@ -1,10 +1,10 @@
 [
   {
-    "name": "HTML",
+    "name": "HTML5",
     "src": "../images/stack/html.png"
   },
   {
-    "name": "CSS",
+    "name": "CSS3",
     "src": "../images/stack/css.png"
   },
   {
@@ -16,7 +16,7 @@
     "src": "../images/stack/react.png"
   },
   {
-    "name": "GatsbyJS",
+    "name": "Gatsby",
     "src": "../images/stack/gatsby.png"
   },
   {

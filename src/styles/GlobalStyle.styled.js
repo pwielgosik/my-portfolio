@@ -506,6 +506,7 @@ th {
 }
 li {
   margin-bottom: calc(2.5rem / 2);
+  list-style: none;
 }
 ol li {
   padding-left: 0;

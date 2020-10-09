@@ -8,9 +8,9 @@ const Section = ({ id, wBackground, title, outlineTitle, children, style }) => {
       <ColumnWrapper
         width="650px"
         toColumnWidth="650px"
-        minHeight="100px"
-        height="100%"
+        minHeight="inherit"
         margin="0 auto 0"
+        padding="2rem"
         style={style}
       >
         <h2>{outlineTitle}</h2>

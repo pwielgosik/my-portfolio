@@ -33,6 +33,7 @@ const Introduction = () => {
           width="100%"
           left
           style={{ justifyContent: "space-evenly", marginTop: "12%" }}
+          id="intro-link-resume"
         >
           <Button primary minWidth="250px">
             download my resume
@@ -42,6 +43,7 @@ const Introduction = () => {
             minWidth="250px"
             to={`/#projects-section`}
             secondary
+            id="intro-link-projects"
           >
             look at my projects
           </Button>
@@ -49,22 +51,24 @@ const Introduction = () => {
         <StyledMobileSocials id="nav-socials-list">
           <li id="mobile-nav-socials-list-item">
             <a
-              id="mobile-nav-socials-link"
+              id="intro-link-linkedin"
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
+              aria-label="Proceed to my LinkedIn profile"
             >
-              <LinkedInIcon />
+              <LinkedInIcon aria-hidden="true" alt="LinkedIn logo icon" />
             </a>
           </li>
           <li id="mobile-nav-socials-list-item">
             <a
-              id="mobile-nav-socials-link"
+              id="intro-link-github"
               target="_blank"
               rel="noreferrer"
               href="https://github.com/S50B32"
+              aria-label="Proceed to my GitHub profile"
             >
-              <GithubIcon />
+              <GithubIcon aria-hidden="true" alt="GitHub logo icon" />
             </a>
           </li>
         </StyledMobileSocials>

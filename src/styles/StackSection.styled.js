@@ -1,18 +1,5 @@
 import styled from "styled-components"
 
-export const StyledTooltip = styled.div`
-  display: none;
-  position: absolute;
-  background-color: white;
-  padding: 10px;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  z-index: 1;
-  border-radius: 5px;
-  align-self: center;
-  text-align: center;
-`
 export const StyledImageContainer = styled.div`
   height: 80px;
   width: 80px;
@@ -20,7 +7,9 @@ export const StyledImageContainer = styled.div`
   position: relative;
   &:hover {
     div {
-      display: block;
+      transition-delay: 0.7s;
+
+      opacity: 1;
     }
   }
   @media (max-width: ${({ theme }) => theme.media.phone}) {
