@@ -30,9 +30,13 @@ const Nav = () => {
             toggleSideMenu={toggleSideMenu}
             isOpen={isSideMenuOpen}
           />
+          {console.log("Mobile nav mounted")}
         </>
       ) : (
-        <DesktopMenu />
+        <>
+          <DesktopMenu />
+          {console.log("Desktop nav mounted")}
+        </>
       )}
     </ColumnWrapper>
   )
