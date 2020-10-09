@@ -16,8 +16,14 @@ const ScrollUpButton = () => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleScrollButton)
-    return () => window.removeEventListener("scroll", toggleScrollButton)
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", toggleScrollButton)
+    } else return
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", toggleScrollButton)
+      }
+    }
   }, [])
 
   return (

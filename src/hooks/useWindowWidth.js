@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 const getWindowWidth = () =>
-  window.innerWidth ||
+  (typeof window !== "undefined" && window.innerWidth) ||
   document.documentElement.clientWidth ||
   document.body.clientWidth
 
@@ -21,12 +21,15 @@ const useWindowWidth = () => {
       timeoutId = setTimeout(() => setWidth(getWindowWidth()), 150)
     }
     // set resize listener
-    window.addEventListener("resize", resizeListener)
-
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", resizeListener)
+    }
     // clean up function
     return () => {
       // remove resize listener
-      window.removeEventListener("resize", resizeListener)
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", resizeListener)
+      }
     }
   }, [])
 
