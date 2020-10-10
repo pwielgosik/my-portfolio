@@ -15,7 +15,7 @@ or install it on your local machine by following the instructions below.
 
 1.  **Download my-portfolio repository on your local machine.**
 
-    Choose one of the methods delivered in "Code" section <a href="https://github.com/S50B32/my-portfolio">here</a> to download repository files on your local machine.
+    Choose one of the methods delivered in "Code" section <a href="https://github.com/S50B32/my-portfolio">here</a> to save repository files on your local machine.
 
 2.  **Install project dependencies and start developing it with Gatsby.**
 
