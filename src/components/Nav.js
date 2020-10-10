@@ -9,17 +9,31 @@ import useWindowWidth from "../hooks/useWindowWidth"
 const breakpointWidth = parseInt(theme.media.phone)
 
 const Nav = () => {
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
   const windowWidth = useWindowWidth()
+  const [isDesktopMenuRendered, setIsDesktopMenuRendered] = useState(null)
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
 
   const toggleSideMenu = () => {
     setIsSideMenuOpen(!isSideMenuOpen)
   }
 
+  useEffect(() => {
+    if (windowWidth <= breakpointWidth) {
+      return setIsDesktopMenuRendered(false)
+    } else {
+      return setIsDesktopMenuRendered(true)
+    }
+  }, [])
+
   return (
     <ColumnWrapper as="nav" width="650px" margin="0 auto 0" top>
       <h2>Navigation</h2>
-      {windowWidth <= breakpointWidth ? (
+      {isDesktopMenuRendered ? (
+        <>
+          <DesktopMenu />
+          {console.log("Desktop nav mounted")}
+        </>
+      ) : (
         <>
           <Hamburger
             id="hamburger-button"
@@ -31,11 +45,6 @@ const Nav = () => {
             isOpen={isSideMenuOpen}
           />
           {console.log("Mobile nav mounted")}
-        </>
-      ) : (
-        <>
-          <DesktopMenu />
-          {console.log("Desktop nav mounted")}
         </>
       )}
     </ColumnWrapper>
