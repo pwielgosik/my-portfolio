@@ -73,14 +73,6 @@ function SEO({ description, lang, meta, title }) {
     >
       <link
         rel="preload"
-        as="font"
-        href="../fonts/futura-t-ot-medium.woff2"
-        href={fontUrl}
-        type="font/woff2"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
         href="/fonts/fonts.css"
         as="style"
         onload="this.rel='stylesheet'"

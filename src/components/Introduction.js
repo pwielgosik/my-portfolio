@@ -35,8 +35,16 @@ const Introduction = () => {
           style={{ justifyContent: "space-evenly", marginTop: "12%" }}
           id="intro-link-resume"
         >
-          <Button primary minWidth="250px">
-            download my resume
+          <Button
+            as="a"
+            id="mobile-nav-link-resume"
+            href="https://drive.google.com/file/d/1ekqXZQnXTxXDY4UDA6wwIMNHzyay98NA/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            primary
+            minWidth="250px"
+          >
+            read my resume
           </Button>
           <Button
             as={AnchorLink}

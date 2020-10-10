@@ -12,13 +12,18 @@ const Nav = () => {
   return (
     <StyledDesktopNav>
       <StyledLinks id="nav-links-list">
-        <li id="nav-link-about_me">
+        {/* <li id="nav-link-about_me">
           <a to={`/`} id="nav-link-about_me">
             about me
           </a>
-        </li>
+        </li> */}
         <li id="nav-links-list-item">
-          <a target="_blank" rel="noreferrer" id="nav-link-resume">
+          <a
+            href="https://drive.google.com/file/d/1ekqXZQnXTxXDY4UDA6wwIMNHzyay98NA/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            id="nav-link-resume"
+          >
             resume
           </a>
         </li>

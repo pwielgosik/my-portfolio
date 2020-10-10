@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 62.5% 'Futura T OT Medium', serif, sans-serif;
+  font: 62.5% 'Futura T OT Medium', sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Futura T OT Medium', serif;
+  font-family: 'Futura T OT Medium', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

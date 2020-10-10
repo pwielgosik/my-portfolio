@@ -10,7 +10,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
   return (
     <MobileMenuWrapper id="mobile-nav-container" isOpen={isOpen}>
       <ul id="mobile-nav">
-        <li id="mobile-nav-item" onClick={toggleSideMenu}>
+        {/* <li id="mobile-nav-item" onClick={toggleSideMenu}>
           <MobileSideMenuButton
             id="mobile-nav-link-about_me"
             primary
@@ -19,13 +19,15 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
           >
             about me
           </MobileSideMenuButton>
-        </li>
+        </li> */}
         <li id="mobile-nav-item" onClick={toggleSideMenu}>
           <MobileSideMenuButton
+            as="a"
             id="mobile-nav-link-resume"
+            href="https://drive.google.com/file/d/1ekqXZQnXTxXDY4UDA6wwIMNHzyay98NA/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
             primary
-            as={AnchorLink}
-            to={`/`}
           >
             resume
           </MobileSideMenuButton>
