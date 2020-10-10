@@ -58,7 +58,7 @@ export const MobileSideMenuButton = styled(Button)`
   padding: 2rem;
   border-radius: 0;
 `
-export const StyledScrollUpButton = styled.div`
+export const StyledScrollUpButton = styled.button`
   position: fixed;
   bottom: 50px;
   right: 50px;

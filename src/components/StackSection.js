@@ -53,7 +53,10 @@ const StackSection = () => {
           </StyledImageContainer>
         ))}
       </RowWrapper>
-      <ScrollDownButton to={`/#projects-section`} />
+      <ScrollDownButton
+        to={`/#projects-section`}
+        ariaLabel="Scroll down to projects section"
+      />
     </Section>
   )
 }

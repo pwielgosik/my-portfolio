@@ -72,7 +72,10 @@ const Introduction = () => {
             </a>
           </li>
         </StyledMobileSocials>
-        <ScrollDownButton to={`/#technologies-section`} />
+        <ScrollDownButton
+          to={`/#technologies-section`}
+          ariaLabel="Scroll down to technologies section"
+        />
       </StyledIntroductionContainer>
     </section>
   )

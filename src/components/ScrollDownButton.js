@@ -3,14 +3,10 @@ import ScrollUpSvg from "../images/arrow-icon.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StyledScrollDownButton } from "../styles/Buttons.styled"
 
-const ScrollDownButton = ({ to }) => {
+const ScrollDownButton = ({ to, ariaLabel }) => {
   return (
-    <StyledScrollDownButton
-      as={AnchorLink}
-      to={to}
-      aria-label="Scroll to next page section"
-    >
-      <ScrollUpSvg aria-hidden="true" alt="Arrow down" />
+    <StyledScrollDownButton id="button-scroll_section" as={AnchorLink} to={to}>
+      <ScrollUpSvg alt="Arrow down" aria-label={ariaLabel} />
     </StyledScrollDownButton>
   )
 }

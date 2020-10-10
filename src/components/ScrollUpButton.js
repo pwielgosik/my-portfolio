@@ -28,12 +28,15 @@ const ScrollUpButton = () => {
 
   return (
     <StyledScrollUpButton
+      id="button-scroll_header"
       isVisible={isVisible}
       as={AnchorLink}
       to={`/#header`}
-      aria-label="Scroll up to page header"
     >
-      <ScrollUpSvg aria-hidden="true" alt="Arrow up" />
+      <ScrollUpSvg
+        aria-label="Scroll back to beginning of the page"
+        alt="Arrow up"
+      />
     </StyledScrollUpButton>
   )
 }

@@ -31,7 +31,6 @@ const Nav = () => {
       {isDesktopMenuRendered ? (
         <>
           <DesktopMenu />
-          {console.log("Desktop nav mounted")}
         </>
       ) : (
         <>
@@ -44,7 +43,6 @@ const Nav = () => {
             toggleSideMenu={toggleSideMenu}
             isOpen={isSideMenuOpen}
           />
-          {console.log("Mobile nav mounted")}
         </>
       )}
     </ColumnWrapper>

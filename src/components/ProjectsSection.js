@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import actions from "../data/actions"
 import Section from "./Section"
 import ProjectDetails from "./ProjectDetails"
-import { StyledImageContainer } from "../styles/ProjectsSection.styled"
+import { StyledOpenProjectDetailsButton } from "../styles/ProjectsSection.styled"
 import { ColumnWrapper } from "../styles/Wrappers.styled"
 
 const ProjectsSection = () => {
@@ -73,20 +73,19 @@ const ProjectsSection = () => {
           return (
             <>
               {!isOpen && (
-                <>
-                  <StyledImageContainer
-                    onClick={() => handleClick(project, isOpen)}
-                    aria-label={`Proceed to the detailed article about ${project.name} project`}
-                  >
+                <StyledOpenProjectDetailsButton
+                  onClick={() => handleClick(project, isOpen)}
+                  aria-label={`Proceed to the detailed article about ${project.name} project`}
+                >
+                  <article>
                     <h3 style={{ lineHeight: 0 }}>{project.name}</h3>
-
                     <Img
                       fluid={project.src.childImageSharp.fluid}
                       alt={`View of the project ${project.name}`}
                       aria-label="hidden"
                     />
-                  </StyledImageContainer>
-                </>
+                  </article>
+                </StyledOpenProjectDetailsButton>
               )}
               <ProjectDetails
                 project={project}

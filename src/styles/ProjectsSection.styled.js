@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const StyledImageContainer = styled.article`
+export const StyledOpenProjectDetailsButton = styled.button`
+  display: block;
+
+  border: none;
+  background-color: transparent;
   position: relative;
   width: 70%;
   margin: 0;
@@ -11,6 +15,7 @@ export const StyledImageContainer = styled.article`
   h3 {
     opacity: 0;
     transition: all 0.4s ease-in-out;
+    text-align: left;
   }
   &:hover {
     margin-top: 1.5rem;
