@@ -23,7 +23,7 @@ const Nav = () => {
     } else {
       return setIsDesktopMenuRendered(true)
     }
-  }, [])
+  }, [windowWidth])
 
   return (
     <ColumnWrapper as="nav" width="650px" margin="0 auto 0" top>
