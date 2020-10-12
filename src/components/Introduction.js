@@ -37,7 +37,7 @@ const Introduction = () => {
         >
           <Button
             as="a"
-            id="mobile-nav-link-resume"
+            id="introduction-button-link_resume"
             href="https://drive.google.com/file/d/1ekqXZQnXTxXDY4UDA6wwIMNHzyay98NA/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
