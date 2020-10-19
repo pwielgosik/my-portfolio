@@ -18,6 +18,7 @@
   {
     "name": "Jaglana Homepage",
     "src": "../images/projects/jaglana-home.jpg",
+    "liveSrc": "https://jaglanahome.netlify.app/",
     "githubSrc": "https://github.com/S50B32/jaglana-homepage",
     "stack": ["HTML5", "CSS3", "React", "Gatsby", "GraphQL"],
     "description": "Project with which I won my first client. A simple design which shown my skills to the restaurant owner and led to further cooperation between us. I got to know some new tools such as GatsbyJS, GraphQL and styled-components."
