@@ -7,7 +7,8 @@
   Przemysław Wielgosik - My Portfolio Site
 </h1>
 
-My portfolio site project made with GatsbyJS.
+My portfolio site project made with GatsbyJS.<br>
+<br>
 <b>View it live</b> on: https://pwielgosik.netlify.app/
 or install it on your local machine by following the instructions below.
 
