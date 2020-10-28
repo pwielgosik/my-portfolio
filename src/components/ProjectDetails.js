@@ -34,7 +34,7 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
         >
           ✖
         </CloseModalButton>
-        <RowWrapper as="header" style={{ margin: "0 1rem 1rem" }}>
+        <RowWrapper as="header" margin="0 1rem 1rem">
           <h3>{project.name}</h3>
           {project.liveSrc && (
             <Button
@@ -89,17 +89,7 @@ const ProjectDetails = ({ project, technologies, dispatch, isOpen }) => {
               ))}
           </StyledTechContainer>
         </section>
-        <RowWrapper style={{ margin: "1rem" }}>
-          <Button
-            style={{ width: 200 }}
-            primary
-            onClick={() =>
-              dispatch({ type: actions.HIDE_DETAILS, payload: project })
-            }
-          >
-            Close
-          </Button>
-        </RowWrapper>
+        <RowWrapper style={{ margin: "1rem" }}></RowWrapper>
       </StyledProjectDetails>
     </BackgroundWrapper>
   ) : null
