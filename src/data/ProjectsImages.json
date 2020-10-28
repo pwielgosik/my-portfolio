@@ -13,7 +13,7 @@
       "WordPress",
       "WooCommerce"
     ],
-    "description": "My most ambitious commercial project which I am very proud of. It took a lot of effort to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless content management system and built an individual front-end myself, including design and coding. I also understood the principles of communication between a rather unfriendly, still being developed Wordpress/Woocommerce GraphQL API and the UI layer."
+    "description": "My most ambitious commercial project which I am very proud of. It took a lot of effort to understand and solve all the issues related to building an e-commerce web app from scratch. I used Wordpress as a headless CMS and built an individual front-end by myself, including design and coding. This project helped me with understanding some main principles of communication between Wordpress/Woocommerce GraphQL API and the UI layer."
   },
   {
     "name": "Jaglana Homepage",
