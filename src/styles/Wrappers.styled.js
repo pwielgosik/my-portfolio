@@ -1,19 +1,15 @@
 import styled from "styled-components"
 
 export const ResponsiveWidthWrapper = styled.div`
-  margin: auto;
+  margin: ${({ margin }) => (margin ? margin : "auto")};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   min-height: ${({ minHeight }) => minHeight};
-
   background-color: ${({ background }) => background};
   padding: ${({ padding }) => padding};
-
   box-shadow: ${({ shadow }) =>
     shadow && `0px 0px 30px 0px rgba(0, 0, 0, 0.08);`};
-
   border-radius: ${({ round }) => round && "5px"};
-
   @media (max-width: ${({ width }) => width}) {
     width: 100%;
   }
