@@ -15,7 +15,7 @@ or install it on your local machine by following the instructions below.
 
 1.  **Download my-portfolio repository on your local machine.**
 
-    Choose one of the methods delivered in "Code" section <a href="https://github.com/S50B32/my-portfolio">here</a> to save repository files on your local machine.
+    Choose one of the methods delivered in "Code" section <a href="https://github.com/pwielgosik/my-portfolio">here</a> to save repository files on your local machine.
 
 2.  **Install project dependencies and start developing it with Gatsby.**
 
@@ -26,7 +26,7 @@ or install it on your local machine by following the instructions below.
     npm install
     gatsby develop
     ```
+
 3.  **Open project in a browser.**
 
     The site is now running at [http://localhost:8000](http://localhost:8000)!
-
