@@ -59,7 +59,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link-linkedin"
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/przemys%C5%82aw-wielgosik-827653106"
+            href="https://www.linkedin.com/in/pwielgosik"
             aria-label="Proceed to my LinkedIn profile"
           >
             <LinkedInIcon aria-hidden="true" alt="LinkedIn logo icon" />
@@ -70,7 +70,7 @@ const MobileSideMenu = ({ isOpen, toggleSideMenu }) => {
             id="mobile-nav-link-github"
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/S50B32"
+            href="https://github.com/pwielgosik"
             aria-label="Proceed to my GitHub profile"
           >
             <GithubIcon aria-hidden="true" alt="GitHub logo icon" />
