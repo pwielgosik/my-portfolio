@@ -73,7 +73,7 @@ const Introduction = () => {
               id="intro-link-github"
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/S50B32"
+              href="https://github.com/pwielgosik"
               aria-label="Proceed to my GitHub profile"
             >
               <GithubIcon aria-hidden="true" alt="GitHub logo icon" />
