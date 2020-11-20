@@ -19,7 +19,7 @@ const Nav = () => {
         </li> */}
         <li id="nav-links-list-item">
           <a
-            href="https://drive.google.com/file/d/1ekqXZQnXTxXDY4UDA6wwIMNHzyay98NA/view?usp=sharing"
+            href="https://drive.google.com/file/d/1WV9IYX6JI5ZZJEDo915S_pdQcN0JnmF1/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             id="nav-link-resume"
