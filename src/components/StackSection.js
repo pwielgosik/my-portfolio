@@ -14,6 +14,7 @@ const StackSection = () => {
         nodes {
           id
           name
+          url
           src {
             childImageSharp {
               fluid(maxWidth: 300) {
@@ -39,18 +40,20 @@ const StackSection = () => {
         as="ul"
         id="known-technologies-list"
       >
-        {data.allStackImagesJson.nodes.map(tech => (
-          <StyledImageContainer
-            key={tech.id}
-            as="li"
-            id="known-technologies-list-item"
-          >
-            <Img
-              fluid={tech.src.childImageSharp.fluid}
-              alt={`${tech.name} logotype`}
-            />
-            <StyledTooltip>{tech.name}</StyledTooltip>
-          </StyledImageContainer>
+        {data.allStackImagesJson.nodes.map(({ id, name, src, url }) => (
+          <li key={id} id={`known-technologies-list-item-${id}`}>
+            <StyledImageContainer
+              as="a"
+              href={url}
+              id={`tech-link-${id}`}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Proceed to ${name} introduction website`}
+            >
+              <Img fluid={src.childImageSharp.fluid} alt={`${name} logotype`} />
+              <StyledTooltip>{name}</StyledTooltip>
+            </StyledImageContainer>
+          </li>
         ))}
       </RowWrapper>
       <ScrollDownButton

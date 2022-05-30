@@ -1,34 +1,42 @@
 [
   {
     "name": "HTML5",
-    "src": "../images/stack/html.png"
+    "src": "../images/stack/html.png",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
   },
   {
     "name": "CSS3",
-    "src": "../images/stack/css.png"
+    "src": "../images/stack/css.png",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
     "name": "JavaScript",
-    "src": "../images/stack/js.png"
+    "src": "../images/stack/js.png",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
   },
   {
     "name": "React",
-    "src": "../images/stack/react.png"
+    "src": "../images/stack/react.png",
+    "url": "https://reactjs.org"
   },
   {
     "name": "Gatsby",
-    "src": "../images/stack/gatsby.png"
+    "src": "../images/stack/gatsby.png",
+    "url": "https://www.gatsbyjs.com"
   },
   {
     "name": "GraphQL",
-    "src": "../images/stack/graphql.png"
+    "src": "../images/stack/graphql.png",
+    "url": "https://graphql.org"
   },
   {
     "name": "WordPress",
-    "src": "../images/stack/wp.png"
+    "src": "../images/stack/wp.png",
+    "url": "https://wordpress.org"
   },
   {
     "name": "WooCommerce",
-    "src": "../images/stack/woo.png"
+    "src": "../images/stack/woo.png",
+    "url": "https://woocommerce.com"
   }
 ]

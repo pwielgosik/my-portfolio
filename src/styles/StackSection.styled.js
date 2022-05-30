@@ -5,6 +5,7 @@ export const StyledImageContainer = styled.div`
   width: 80px;
   margin: 3rem;
   position: relative;
+  display: block;
   &:hover {
     div {
       transition-delay: 0.7s;
