@@ -15,6 +15,11 @@
     "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
   },
   {
+    "name": "TypeScript",
+    "src": "../images/stack/ts.png",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
     "name": "React",
     "src": "../images/stack/react.png",
     "url": "https://reactjs.org"
