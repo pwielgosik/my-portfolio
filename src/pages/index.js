@@ -8,7 +8,7 @@ import BackgroundSection from "../components/BackgroundSection"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Przemysław Wielgosik - Frontend Developer" />
     <BackgroundSection />
     <Introduction />
     <StackSection />
