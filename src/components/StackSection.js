@@ -4,7 +4,10 @@ import { RowWrapper } from "../styles/Wrappers.styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import ScrollDownButton from "./ScrollDownButton"
-import { StyledImageContainer } from "../styles/StackSection.styled"
+import {
+  StyledTechWrapper,
+  StyledTechImageContainer,
+} from "../styles/StackSection.styled"
 import { StyledTooltip } from "../styles/Layout.styled"
 
 const StackSection = () => {
@@ -42,17 +45,23 @@ const StackSection = () => {
       >
         {data.allStackImagesJson.nodes.map(({ id, name, src, url }) => (
           <li key={id} id={`known-technologies-list-item-${id}`}>
-            <StyledImageContainer
-              as="a"
-              href={url}
-              id={`tech-link-${id}`}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Proceed to ${name} introduction website`}
-            >
-              <Img fluid={src.childImageSharp.fluid} alt={`${name} logotype`} />
-              <StyledTooltip>{name}</StyledTooltip>
-            </StyledImageContainer>
+            <StyledTechWrapper>
+              <h3>{name}</h3>
+              <StyledTechImageContainer
+                as="a"
+                href={url}
+                id={`tech-link-${id}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Proceed to ${name} introduction website`}
+              >
+                <Img
+                  fluid={src.childImageSharp.fluid}
+                  alt={`${name} logotype`}
+                />
+                <StyledTooltip>{name}</StyledTooltip>
+              </StyledTechImageContainer>
+            </StyledTechWrapper>
           </li>
         ))}
       </RowWrapper>
