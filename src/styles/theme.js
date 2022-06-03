@@ -3,11 +3,13 @@
 const theme = {
   colors: {
     // primary: "rgba(242, 204, 12, 1)", //#f2cc0c
+    background: "#FAFAFA",
     primary: "#0B7869",
     secondary: "#DEBF84",
     light: "#E3A149",
     dark: "#130A2B",
-    grey: "#AEAEAE",
+    lightgrey: "#AEAEAE",
+    grey: "#A2A2A2",
   },
   fonts: {
     regular: "Futura T OT Medium",

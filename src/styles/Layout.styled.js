@@ -48,8 +48,8 @@ export const StyledDesktopNav = styled.div`
 export const StyledSection = styled.section`
   width: 100vw;
   min-height: 100vh;
-  background: ${({ wBackground }) =>
-    wBackground ? "linear-gradient(to right, #130a2b, #0b7869)" : "white"};
+  background: ${({ wBackground, theme }) =>
+    wBackground ? "linear-gradient(to right, #130a2b, #0b7869)" : theme.colors.background};
   position: relative;
   @media (max-width: ${({ theme }) => theme.media.phone}) {
     height: auto;
@@ -59,7 +59,7 @@ export const StyledSection = styled.section`
   }
   span:nth-of-type(1) {
     color: ${({ wBackground, theme }) =>
-      wBackground ? theme.colors.secondary : theme.colors.primary};
+    wBackground ? theme.colors.secondary : theme.colors.primary};
     font-size: 2.8rem;
     align-self: flex-start;
     margin: 5rem 0 1rem;
@@ -70,14 +70,14 @@ export const StyledSection = styled.section`
   }
   p {
     color: ${({ wBackground, theme }) =>
-      wBackground ? "white" : theme.colors.grey};
+    wBackground ? "white" : theme.colors.grey};
     font-size: 14px;
     letter-spacing: 0.5px;
   }
 `
 
 export const StyledLinks = styled.ul`
-  background-color: white;
+    background-color: ${({ theme }) => theme.colors.background};;
   padding: 10px;
 `
 

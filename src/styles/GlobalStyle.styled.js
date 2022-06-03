@@ -16,6 +16,7 @@ html {
   overflow-y: scroll;
 }
 body {
+  background-color: ${({ theme }) => theme.colors.background};
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

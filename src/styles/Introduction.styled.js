@@ -17,7 +17,7 @@ export const StyledTitleContainer = styled.div`
   line-height: 40px;
   font-weight: normal;
   font-family: "Futura T OT Medium";
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.lightgrey};
   font-size: 3.2rem;
   z-index: 0;
   h2 {
@@ -35,6 +35,7 @@ export const StyledTitleContainer = styled.div`
   }
   span:nth-of-type(3) {
     margin: 60px;
+    color: ${({ theme }) => theme.colors.grey};
     @media (max-width: ${({ theme }) => theme.media.phone}) {
       margin: 0;
     }
