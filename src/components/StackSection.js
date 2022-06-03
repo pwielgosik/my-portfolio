@@ -34,7 +34,6 @@ const StackSection = () => {
       outlineTitle="Technologies I know"
       title="Technologies I worked with"
       id="technologies-section"
-      wBackground
       style={{ justifyContent: "space-evenly" }}
     >
       <RowWrapper
