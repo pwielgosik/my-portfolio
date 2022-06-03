@@ -10,7 +10,7 @@ const breakpointWidth = parseInt(theme.media.phone)
 
 const Nav = () => {
   const windowWidth = useWindowWidth()
-  const [isDesktopMenuRendered, setIsDesktopMenuRendered] = useState(null)
+  const [isDesktopMenuRendered, setIsDesktopMenuRendered] = useState(true)
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
 
   const toggleSideMenu = () => {
