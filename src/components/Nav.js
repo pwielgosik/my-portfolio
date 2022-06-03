@@ -5,12 +5,13 @@ import MobileSideMenu from "./MobileSideMenu"
 import theme from "../styles/theme"
 import { ColumnWrapper } from "../styles/Wrappers.styled"
 import useWindowWidth from "../hooks/useWindowWidth"
+import { isMobile } from "../utils/functions"
 
 const breakpointWidth = parseInt(theme.media.phone)
 
 const Nav = () => {
   const windowWidth = useWindowWidth()
-  const [isDesktopMenuRendered, setIsDesktopMenuRendered] = useState(true)
+  const [isDesktopMenuRendered, setIsDesktopMenuRendered] = useState(!isMobile())
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
 
   const toggleSideMenu = () => {
