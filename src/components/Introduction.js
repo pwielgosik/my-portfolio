@@ -38,7 +38,7 @@ const Introduction = () => {
           <Button
             as="a"
             id="introduction-button-link_resume"
-            href="https://drive.google.com/file/d/1WV9IYX6JI5ZZJEDo915S_pdQcN0JnmF1/view?usp=sharing"
+            href="https://drive.google.com/file/d/1BceprzVlMcFqV0HcrShvQK9SH9xMYFwD/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             primary
