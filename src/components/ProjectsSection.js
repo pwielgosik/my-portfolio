@@ -50,6 +50,8 @@ const ProjectsSection = () => {
         return [state, action.payload]
       case actions.HIDE_DETAILS:
         return state.filter(project => project.id !== action.payload.id)
+      default:
+        return state
     }
   }
 
